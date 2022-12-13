@@ -7,6 +7,7 @@ function AuthWrapper() {
     const [toggle, setToggle] = useState(true);
 
     return (
+    <div className="Container">
       <div className="AuthWrapper">
         <div className="TemplateBox">
         <h2
@@ -27,6 +28,7 @@ function AuthWrapper() {
             
         </div>
       </div>
+    </div>
     );
   }
   

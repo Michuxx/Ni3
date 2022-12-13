@@ -1,6 +1,8 @@
 import "../../css/index.css";
 
 function LoginPage() {
+
+
     return (
       
         <div className="TemplateBox">
@@ -17,7 +19,7 @@ function LoginPage() {
                         type="text"
                         id="password"
                         className="fadeIn third"
-                        name="login"
+                        name="password"
                         placeholder="Password"
                     />
                     <input type="submit" className="fadeIn fourth" value="Log In" />
