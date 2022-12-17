@@ -1,48 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap%27');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600&display=swap");
 
-
-
-
-* 
-{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-
-
-.Container
-{
-  width:100%;
+.Container {
+  width: 100%;
   min-height: 100vh;
-  padding-top:7%;
+  padding-top: 7%;
 
   background: hsla(238, 41%, 38%, 1);
 
-  background: radial-gradient(circle, hsla(238, 41%, 38%, 1) 0%, hsla(255, 31%, 66%, 1) 21%, hsla(334, 46%, 64%, 1) 51%, hsla(261, 40%, 29%, 1) 85%);
-  
-  background: -moz-radial-gradient(circle, hsla(238, 41%, 38%, 1) 0%, hsla(255, 31%, 66%, 1) 21%, hsla(334, 46%, 64%, 1) 51%, hsla(261, 40%, 29%, 1) 85%);
-  
-  background: -webkit-radial-gradient(circle, hsla(238, 41%, 38%, 1) 0%, hsla(255, 31%, 66%, 1) 21%, hsla(334, 46%, 64%, 1) 51%, hsla(261, 40%, 29%, 1) 85%);
+  background: radial-gradient(
+    circle,
+    hsla(238, 41%, 38%, 1) 0%,
+    hsla(255, 31%, 66%, 1) 21%,
+    hsla(334, 46%, 64%, 1) 51%,
+    hsla(261, 40%, 29%, 1) 85%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(238, 41%, 38%, 1) 0%,
+    hsla(255, 31%, 66%, 1) 21%,
+    hsla(334, 46%, 64%, 1) 51%,
+    hsla(261, 40%, 29%, 1) 85%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(238, 41%, 38%, 1) 0%,
+    hsla(255, 31%, 66%, 1) 21%,
+    hsla(334, 46%, 64%, 1) 51%,
+    hsla(261, 40%, 29%, 1) 85%
+  );
 }
 
-.AuthWrapper
-{
-  
+.AuthWrapper {
   display: flex;
-  margin:auto;
+  margin: auto;
   font-family: "Poppins", sans-serif;
   height: 30rem;
   width: 90%;
   max-width: 40rem;
   justify-content: center;
-  
-  /* margin-top: 7%; */
 }
 
-.TemplateBox
-{
+.TemplateBox {
   text-align: center;
   width: 25rem;
   height: 20rem;
@@ -61,14 +67,12 @@ h2.active {
   border-bottom: 2px solid #5fbae9;
 }
 
-h2
-{
+h2 {
   font-size: 1.5rem;
   font-weight: 600;
   text-transform: uppercase;
   display: inline-block;
   margin: 40px 8px 10px 8px;
-  
 }
 
 input[type="button"],
@@ -142,9 +146,7 @@ input[type="text"]:placeholder {
   color: #cccccc;
 }
 
-.InputsText
-{
+.InputsText {
   margin-top: 1rem;
   padding-top: 0.25rem;
-
 }
