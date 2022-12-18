@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K3yoDlDRZ6bgqf4pbhbqbxSAZh0wralRVQujY8fhsJ5vW9qpYeKpjBN6Oe4D7XfDZmXUmRJ0RX+97dTsuQneSQ==",
+  "dgSpecHash": "9woHUx5Krn0/LqRZvnOjw4zJge95RlVAE3HDrZ3Bs5/KZhO/QLC9eMsYipZwdeMlz0CQ+A9/E20SiErt6mSThw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Michu\\Desktop\\Ni3-alpha\\backend\\back-end\\back-end.csproj",
+  "projectFilePath": "C:\\Users\\Michu\\Desktop\\jakis tam gicik\\Ni3\\backend\\back-end\\back-end.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Michu\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Michu\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
