@@ -95,7 +95,24 @@ namespace back_end.Controllers
             await _context.SaveChangesAsync();
             return Ok();
 
-        }
 
+
+        }
+        [HttpGet("courses/All")]
+        public async Task<ActionResult<List<AddCourseDto>>> GetCourseList()
+        {
+            List<AddCourseDto> courses = new List<AddCourseDto>();
+
+            // rewrite courses to simpler class
+            foreach (Course rewriter in await _context.Courses.ToListAsync())
+            {
+                AddCourseDto temp = new AddCourseDto();
+                temp.CourseName = rewriter.CourseName;
+                temp.Description = rewriter.Description;
+                courses.Add(temp);
+            }
+
+            return Ok(courses);
+        }
     }
 }

@@ -4,10 +4,21 @@ import Logo from "../../images/university.png";
 import Idea from "../../images/idea.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function MainPage() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
+  const [courses, setCourses] = useState([]);
   const navigate = useNavigate();
+  useEffect(() => {
+    axios.get("https://localhost:7168/api/Ni3/courses/All").then((Response) => {
+      const courseList = Response.data.map((course) => ({
+        courseName: course.courseName,
+        description: course.description,
+      }));
+      setCourses(courseList);
+    });
+  }, []);
 
   const Wyloguj = () => {
     localStorage.removeItem("user");
@@ -23,6 +34,9 @@ function MainPage() {
       navigate("/");
     }
   }, [user]);
+
+  const GetAllCourses = () => {};
+
   return (
     <div className="MainContainer">
       <div className="NavBar">
@@ -49,7 +63,16 @@ function MainPage() {
               <h1>Lista Kursów</h1>
             </div>
           </div>
-          <div className="Courses"></div>
+          <div className="Courses">
+            <ol>
+              {courses.map((course) => (
+                <li key={course.courseName}>
+                  <span>{course.courseName}</span>
+                  <span>{course.description}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </main>
       <footer>© 2022/2023 Ni3 | wszelkie prawa zastrzeżone :3</footer>
