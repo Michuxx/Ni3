@@ -70,8 +70,8 @@ namespace back_end.Controllers
             }
 
 
-
-            return Ok();
+            records.Password = null;
+            return Ok(records);
         }
 
     }

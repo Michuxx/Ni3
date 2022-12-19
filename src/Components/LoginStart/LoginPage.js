@@ -1,13 +1,15 @@
 import "../../css/index.css";
 import { useState } from "react";
 import axios from "axios";
-import { Outlet, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+
+  const navigate = useNavigate();
 
   const LoginFunction = (e) => {
     e.preventDefault();
@@ -25,8 +27,9 @@ function LoginPage() {
         login: login,
         password: password,
       })
-      .then((res) => {
-        <Link to="/MainPage" />;
+      .then(async (res) => {
+        await localStorage.setItem("user", JSON.stringify(res.data));
+        navigate("/MainPage");
       })
       .catch((err) => {
         setError("Login lub haslo jest nieprawidlowe");

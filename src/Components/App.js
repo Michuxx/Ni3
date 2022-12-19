@@ -1,7 +1,7 @@
-import AuthWrapper from './LoginStart/AuthWrapper';
-import {Route, Routes} from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom';
-import MainPage from './MainPage/MainPage';
+import AuthWrapper from "./LoginStart/AuthWrapper";
+import { Route, Routes } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import MainPage from "./MainPage/MainPage";
 
 function App() {
   return (
@@ -15,12 +15,8 @@ function App() {
   );
 }
 
-  const NotFound = () => {
-    return(
-      <h1>NOT FOUND</h1>
-
-    );
-
-  };
+const NotFound = () => {
+  return <h1>NOT FOUND</h1>;
+};
 
 export default App;
