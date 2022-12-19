@@ -146,3 +146,8 @@ footer {
   margin: 0 0 24px;
   text-decoration: overline;
 }
+
+.nazwa_kursu:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

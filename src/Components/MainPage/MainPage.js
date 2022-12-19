@@ -69,14 +69,18 @@ function MainPage() {
             <ol>
               {courses.map((course) => (
                 <li key={course.courseName}>
-                  <span
-                    onClick={() =>
-                      MovingData(course.courseName, course.description)
-                    }
-                  >
-                    {course.courseName}
-                  </span>
-                  <span>{course.description}</span>
+                  <div className="nazwa_kursu">
+                    <span
+                      onClick={() =>
+                        MovingData(course.courseName, course.description)
+                      }
+                    >
+                      {course.courseName}
+                    </span>
+                  </div>
+                  <div className="opis_kursu">
+                    <span>{course.description}</span>
+                  </div>
                 </li>
               ))}
             </ol>

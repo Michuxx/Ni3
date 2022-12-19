@@ -1,3 +1,4 @@
+import "../../css/CommentPage.css";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
@@ -42,6 +43,10 @@ const CoursePage = () => {
     }
   }, []);
 
+  const GoBack = () => {
+    navigate("/MainPage");
+  };
+
   useEffect(() => {
     axios
       .get(`https://localhost:7168/api/Ni3/comments/${Name}`)
@@ -53,19 +58,38 @@ const CoursePage = () => {
       });
   }, [trigger]);
   return (
-    <div>
-      <form onSubmit={SendComment}>
-        <textarea ref={textareaRef}></textarea>
-        <button>Wyślij</button>
-      </form>
-      {comments.map((com, i) => {
-        return (
-          <div key={"comment" + i}>
-            <p>{com.userLogin}</p>
-            <p>{com.text}</p>
-          </div>
-        );
-      })}
+    <div className="whole-body">
+      <div className="NavBar">
+        <button onClick={GoBack} className="guzik_wroc">
+          Wróć
+        </button>
+        Obecny Kurs: {courseName}
+      </div>
+      <div className="Main-section">
+        <div className="CommentSection">
+          {comments.map((com, i) => {
+            return (
+              <div className="comment">
+                <div key={"comment" + i}>
+                  <span id="login">
+                    <p>{com.userLogin}</p>
+                  </span>
+
+                  <span id="text">
+                    <h3>{com.text}</h3>
+                  </span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="add-comment-box">
+          <form onSubmit={SendComment}>
+            <textarea ref={textareaRef}></textarea>
+            <button id="guzik">Wyślij</button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };

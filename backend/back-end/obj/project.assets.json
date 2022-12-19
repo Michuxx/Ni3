@@ -2446,11 +2446,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Michu\\Desktop\\jakis tam gicik\\Ni3\\backend\\back-end\\back-end.csproj",
+      "projectUniqueName": "C:\\Users\\Michu\\Desktop\\Ni3-main\\backend\\back-end\\back-end.csproj",
       "projectName": "back-end",
-      "projectPath": "C:\\Users\\Michu\\Desktop\\jakis tam gicik\\Ni3\\backend\\back-end\\back-end.csproj",
+      "projectPath": "C:\\Users\\Michu\\Desktop\\Ni3-main\\backend\\back-end\\back-end.csproj",
       "packagesPath": "C:\\Users\\Michu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Michu\\Desktop\\jakis tam gicik\\Ni3\\backend\\back-end\\obj\\",
+      "outputPath": "C:\\Users\\Michu\\Desktop\\Ni3-main\\backend\\back-end\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

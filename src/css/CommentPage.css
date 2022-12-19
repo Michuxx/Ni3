@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600&display=swap");
+
+body {
+  background: hsla(353, 36%, 82%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(353, 36%, 82%, 1) 0%,
+    hsla(340, 22%, 65%, 1) 25%,
+    hsla(314, 31%, 47%, 1) 50%,
+    hsla(284, 79%, 28%, 1) 75%,
+    hsla(279, 97%, 14%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(353, 36%, 82%, 1) 0%,
+    hsla(340, 22%, 65%, 1) 25%,
+    hsla(314, 31%, 47%, 1) 50%,
+    hsla(284, 79%, 28%, 1) 75%,
+    hsla(279, 97%, 14%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(353, 36%, 82%, 1) 0%,
+    hsla(340, 22%, 65%, 1) 25%,
+    hsla(314, 31%, 47%, 1) 50%,
+    hsla(284, 79%, 28%, 1) 75%,
+    hsla(279, 97%, 14%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#e2c2c6", endColorstr="#b9929f", GradientType=1);
+}
+
+textarea {
+  resize: none;
+  width: 40vw;
+  font-size: 1.5rem;
+  height: 5vw;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.whole-body {
+  font-family: "Poppins", sans-serif;
+  margin: auto;
+  align-items: center;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  border: 3px;
+  border-radius: 10px;
+  background-color: rgba(243, 243, 243, 0.956);
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#guzik {
+  background-color: transparent;
+  color: #3498db;
+  border: 5px solid #3498db;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: large;
+  cursor: pointer;
+  font-weight: 1000;
+  width: 18rem;
+}
+
+#guzik:hover {
+  background-color: #3498db;
+  color: white;
+  border-color: #2980b9;
+}
+
+.add-comment-box {
+  display: flex;
+  padding-bottom: 1rem;
+  justify-content: center;
+}
+
+.CommentSection {
+  width: 60%;
+  margin: auto;
+  padding-top: 1rem;
+}
+
+p {
+  color: #2980b9;
+}
+
+.Main-section {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.guzik_wroc {
+  background-color: transparent;
+  color: #3498db;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: small;
+  cursor: pointer;
+}
+
+.guzik_wroc:hover {
+  background-color: #3498db;
+  color: white;
+  border-color: #2980b9;
+}
