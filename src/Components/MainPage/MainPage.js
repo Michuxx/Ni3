@@ -70,16 +70,16 @@ function MainPage() {
               {courses.map((course) => (
                 <li key={course.courseName}>
                   <div className="nazwa_kursu">
-                    <span
-                      onClick={() =>
-                        MovingData(course.courseName, course.description)
-                      }
-                    >
-                      {course.courseName}
-                    </span>
+                  <span
+                    onClick={() =>
+                      MovingData(course.courseName, course.description)
+                    }
+                  >
+                    {course.courseName}
+                  </span>
                   </div>
                   <div className="opis_kursu">
-                    <span>{course.description}</span>
+                  <span>{course.description}</span>
                   </div>
                 </li>
               ))}

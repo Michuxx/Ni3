@@ -43,10 +43,6 @@ const CoursePage = () => {
     }
   }, []);
 
-  const GoBack = () => {
-    navigate("/MainPage");
-  };
-
   useEffect(() => {
     axios
       .get(`https://localhost:7168/api/Ni3/comments/${Name}`)
@@ -59,36 +55,24 @@ const CoursePage = () => {
   }, [trigger]);
   return (
     <div className="whole-body">
-      <div className="NavBar">
-        <button onClick={GoBack} className="guzik_wroc">
-          Wróć
-        </button>
-        Obecny Kurs: {courseName}
-      </div>
-      <div className="Main-section">
-        <div className="CommentSection">
-          {comments.map((com, i) => {
-            return (
-              <div className="comment">
-                <div key={"comment" + i}>
-                  <span id="login">
-                    <p>{com.userLogin}</p>
-                  </span>
-
-                  <span id="text">
-                    <h3>{com.text}</h3>
-                  </span>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <div className="add-comment-box">
-          <form onSubmit={SendComment}>
-            <textarea ref={textareaRef}></textarea>
+      {comments.map((com, i) => {
+        return (
+          <div className="comment">
+            <div key={"comment" + i}>
+              <span id="login"><p>{com.userLogin}</p></span>
+              <hr></hr>
+              <span id="text"><p>{com.text}</p></span>
+            </div>
+          </div>
+        );
+      })}
+      <div className="add-comment-box">
+        <form onSubmit={SendComment}>
+          <textarea ref={textareaRef}></textarea>
+          <div className="">
             <button id="guzik">Wyślij</button>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
   );
