@@ -28,12 +28,18 @@ function MainPage() {
       <div className="NavBar">
         <img src={Logo} alt="Logo" height={"95%"} />
         <p>Ni3 - I nie ma trójki</p>
-        {user && user.login}
-        {user ? (
-          <button onClick={Wyloguj}>WYLOGUJ SIE</button>
-        ) : (
-          <button onClick={Zaloguj}>ZALOGUJ SIE</button>
-        )}
+        <div id="login_string">
+          {user && user.login}
+          <div>
+            {user ? (
+              <button onClick={Wyloguj} id="guzik_wyloguj">
+                WYLOGUJ SIE
+              </button>
+            ) : (
+              <button onClick={Zaloguj}>ZALOGUJ SIE</button>
+            )}
+          </div>
+        </div>
       </div>
       <main>
         <div className="Content">
@@ -41,11 +47,6 @@ function MainPage() {
             <div className="CourseLabel">
               <img src={Idea} alt="icon" height={"96px"} />
               <h1>Lista Kursów</h1>
-            </div>
-            <div className="Buttons">
-              <button type="button" className="Add">
-                +
-              </button>
             </div>
           </div>
           <div className="Courses"></div>

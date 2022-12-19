@@ -93,3 +93,38 @@ footer {
 .Add:hover {
   background-color: #77669c;
 }
+
+#login_string {
+  text-align: right;
+  margin-left: auto;
+  font-size: x-large;
+  margin-right: 3%;
+}
+
+#guzik_wyloguj {
+  background-color: transparent;
+  color: #3498db;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: small;
+  cursor: pointer;
+}
+
+#guzik_wyloguj:hover {
+  background-color: #3498db;
+  color: white;
+  border-color: #2980b9;
+}
+
+.CourseLabel {
+  display: flex;
+  align-items: center;
+  letter-spacing: 2px;
+  border-bottom: 1px solid rgb(199, 192, 192);
+  gap: 8px;
+  width: 100%;
+}
