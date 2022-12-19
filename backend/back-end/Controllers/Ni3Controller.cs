@@ -15,7 +15,6 @@ namespace back_end.Controllers
             _context = context;
         }
 
-       
 
         [HttpPost("courses")]
         public async Task<Course> AddCourse([FromBody] AddCourseDto addCourseDto)
@@ -33,23 +32,32 @@ namespace back_end.Controllers
 
        
         [HttpPost("accounts")]
-        public async Task<Account> AddAccount([FromBody] AddAccountDto addAccountDto)
+        public async Task<ActionResult<Account>> AddAccount([FromBody] AddAccountDto addAccountDto)
         {
-            var accounts = new Account()
+            // check if there is an account with posing login
+            foreach(Account checkerAccount in await _context.Accounts.ToListAsync())
+            {
+                if(checkerAccount.Login == addAccountDto.Login)
+                {
+                    return BadRequest("There is an account with login alike posted");
+                }
+            }
+            var account = new Account()
             {
                 Login = addAccountDto.Login,
                 Password = addAccountDto.Password
             };
 
-            await _context.Accounts.AddAsync(accounts);
+            await _context.Accounts.AddAsync(account);
             await _context.SaveChangesAsync();
-            return accounts;
+            return Ok(account);
            
         }
 
         [HttpPost("accounts/Check")]
         public async Task<ActionResult<Account>> CheckIsAccountValid([FromBody] AddAccountDto addAccountDto)
         {
+
             var account = new Account()
             {
                 Login = addAccountDto.Login,
@@ -66,13 +74,12 @@ namespace back_end.Controllers
            
             if (addAccountDto.Password != records.Password)
             {
-                return NotFound();
+                return BadRequest("Wrong request");
             }
 
 
 
             return Ok();
         }
-
     }
 }

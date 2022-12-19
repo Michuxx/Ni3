@@ -4,7 +4,7 @@
 
 namespace back_end.Migrations
 {
-    public partial class Initial : Migration
+    public partial class alpha : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -44,15 +44,14 @@ namespace back_end.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Text = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    CourseId = table.Column<int>(type: "int", nullable: false),
-                    AccountId = table.Column<int>(type: "int", nullable: false)
+                    CourseId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Comments", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Comments_Accounts_AccountId",
-                        column: x => x.AccountId,
+                        name: "FK_Comments_Accounts_UserId",
+                        column: x => x.UserId,
                         principalTable: "Accounts",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -65,14 +64,14 @@ namespace back_end.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Comments_AccountId",
-                table: "Comments",
-                column: "AccountId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Comments_CourseId",
                 table: "Comments",
                 column: "CourseId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comments_UserId",
+                table: "Comments",
+                column: "UserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

@@ -11,8 +11,8 @@ using back_end.Data;
 namespace back_end.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221217165941_Initial")]
-    partial class Initial
+    [Migration("20221219101959_alpha")]
+    partial class alpha
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -52,9 +52,6 @@ namespace back_end.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("AccountId")
-                        .HasColumnType("int");
-
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
 
@@ -67,9 +64,9 @@ namespace back_end.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AccountId");
-
                     b.HasIndex("CourseId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Comments");
                 });
@@ -97,21 +94,26 @@ namespace back_end.Migrations
 
             modelBuilder.Entity("back_end.Models.Comment", b =>
                 {
-                    b.HasOne("back_end.Models.Account", "Account")
-                        .WithMany()
-                        .HasForeignKey("AccountId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("back_end.Models.Course", "Course")
                         .WithMany("Comments")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("back_end.Models.Account", "Account")
+                        .WithMany("Comments")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Account");
 
                     b.Navigation("Course");
+                });
+
+            modelBuilder.Entity("back_end.Models.Account", b =>
+                {
+                    b.Navigation("Comments");
                 });
 
             modelBuilder.Entity("back_end.Models.Course", b =>
