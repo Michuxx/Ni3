@@ -128,3 +128,21 @@ footer {
   gap: 8px;
   width: 100%;
 }
+.nazwa_kursu {
+  font-size: 24px;
+  font-weight: bold;
+  color: #006699;
+  text-align: justify;
+  margin: 20px 0;
+}
+
+.opis_kursu {
+  text-align: justify;
+  letter-spacing: 3px;
+  color: #4c4a37;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 15px;
+  line-height: 32px;
+  margin: 0 0 24px;
+  text-decoration: overline;
+}

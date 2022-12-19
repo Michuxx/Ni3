@@ -2,6 +2,7 @@ import AuthWrapper from "./LoginStart/AuthWrapper";
 import { Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import MainPage from "./MainPage/MainPage";
+import CoursePage from "./CoursePage/CoursePage";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Route path="/" element={<AuthWrapper />} />
         <Route path="/MainPage" element={<MainPage />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/MainPage/:Name" element={<CoursePage />} />
       </Routes>
     </BrowserRouter>
   );

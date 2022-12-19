@@ -35,7 +35,9 @@ function MainPage() {
     }
   }, [user]);
 
-  const GetAllCourses = () => {};
+  const MovingData = (courseName, description) => {
+    navigate(`/MainPage/${courseName}`, { state: { courseName, description } });
+  };
 
   return (
     <div className="MainContainer">
@@ -67,7 +69,13 @@ function MainPage() {
             <ol>
               {courses.map((course) => (
                 <li key={course.courseName}>
-                  <span>{course.courseName}</span>
+                  <span
+                    onClick={() =>
+                      MovingData(course.courseName, course.description)
+                    }
+                  >
+                    {course.courseName}
+                  </span>
                   <span>{course.description}</span>
                 </li>
               ))}

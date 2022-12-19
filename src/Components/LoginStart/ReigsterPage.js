@@ -8,13 +8,22 @@ function RegisterPage() {
   const [RepeatPassword, setRepeatPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(false);
 
   const Registration = (e) => {
     e.preventDefault();
+    if (success) {
+      return;
+    }
     setError(null);
     let freshError = null;
 
-    if (newLogin.trim().length === 0) freshError = "nie moze być puste";
+    if (newPassword != RepeatPassword) {
+      freshError = "Hasła się nie zgadzają";
+    }
+    if (newLogin.trim().length === 0) freshError = "Login nie moze byc pusty";
+    if (newPassword.trim().length === 0)
+      freshError = "Haslo nie moze byc puste";
     if (freshError) {
       setError(freshError);
       return;
@@ -25,9 +34,12 @@ function RegisterPage() {
         login: newLogin,
         password: newPassword,
       })
-      .then((res) => console.log("utworzono uzytkownika"))
+      .then((res) => {
+        console.log("utworzono uzytkownika");
+        setSuccess(true);
+      })
       .catch((err) => {
-        setError("Login lub haslo jest nieprawidlowe");
+        setError("Konto o takich danych istnieje");
         setLoading(false);
       });
     setLoading(false);
@@ -60,6 +72,8 @@ function RegisterPage() {
           />
           <input type="submit" className="fadeIn fourth" value="SIGN UP" />
         </form>
+        {error && error}
+        {success && <span>Konto zostało utworzone</span>}
       </div>
     </div>
   );
