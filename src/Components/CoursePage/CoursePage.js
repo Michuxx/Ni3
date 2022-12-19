@@ -1,3 +1,4 @@
+import "../../css/CommentPage.css";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
@@ -53,19 +54,26 @@ const CoursePage = () => {
       });
   }, [trigger]);
   return (
-    <div>
-      <form onSubmit={SendComment}>
-        <textarea ref={textareaRef}></textarea>
-        <button>Wyślij</button>
-      </form>
+    <div className="whole-body">
       {comments.map((com, i) => {
         return (
-          <div key={"comment" + i}>
-            <p>{com.userLogin}</p>
-            <p>{com.text}</p>
+          <div className="comment">
+            <div key={"comment" + i}>
+              <span id="login"><p>{com.userLogin}</p></span>
+              <hr></hr>
+              <span id="text"><p>{com.text}</p></span>
+            </div>
           </div>
         );
       })}
+      <div className="add-comment-box">
+        <form onSubmit={SendComment}>
+          <textarea ref={textareaRef}></textarea>
+          <div className="">
+            <button id="guzik">Wyślij</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
