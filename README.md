@@ -26,10 +26,6 @@ Serwis z komentarzami na temat kursów PWr
 
 ### Ekran z sekcją komentarzy do kursu
 
-#### przed dodaniem komentarza
+#### komentarze
 
-![comment_section](./screenshots/comments_before.jpg)
-
-#### po dodaniu komentarza
-
-![commented_section](./screenshots/comments_after.jpg)
+![comment_section](./screenshots/commentery.png)
