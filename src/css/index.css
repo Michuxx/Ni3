@@ -150,3 +150,15 @@ input[type="text"]:placeholder {
   margin-top: 1rem;
   padding-top: 0.25rem;
 }
+
+p4 {
+  color: red;
+}
+
+p5 {
+  color: red;
+}
+
+span {
+  color: green;
+}

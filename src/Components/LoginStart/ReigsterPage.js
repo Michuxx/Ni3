@@ -72,7 +72,7 @@ function RegisterPage() {
           />
           <input type="submit" className="fadeIn fourth" value="SIGN UP" />
         </form>
-        {error && error}
+        <p5>{error && error}</p5>
         {success && <span>Konto zostało utworzone</span>}
       </div>
     </div>

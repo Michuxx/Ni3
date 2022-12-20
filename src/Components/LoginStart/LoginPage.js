@@ -60,7 +60,7 @@ function LoginPage() {
           />
           <input type="submit" className="fadeIn fourth" value="Log In" />
         </form>
-        {error && <p>Login lub haslo jest nieprawidlowe</p>}
+        {error && <p4>Login lub haslo jest nieprawidlowe</p4>}
       </div>
     </div>
   );

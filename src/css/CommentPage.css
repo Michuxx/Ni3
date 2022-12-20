@@ -1,75 +1,131 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600&display=swap");
 
 body {
-    background: hsla(353, 36%, 82%, 1);
+  background: hsla(353, 36%, 82%, 1);
 
-    background: linear-gradient(90deg, hsla(353, 36%, 82%, 1) 0%, hsla(340, 22%, 65%, 1) 25%, hsla(314, 31%, 47%, 1) 50%, hsla(284, 79%, 28%, 1) 75%, hsla(279, 97%, 14%, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    hsla(353, 36%, 82%, 1) 0%,
+    hsla(340, 22%, 65%, 1) 25%,
+    hsla(314, 31%, 47%, 1) 50%,
+    hsla(284, 79%, 28%, 1) 75%,
+    hsla(279, 97%, 14%, 1) 100%
+  );
 
-    background: -moz-linear-gradient(90deg, hsla(353, 36%, 82%, 1) 0%, hsla(340, 22%, 65%, 1) 25%, hsla(314, 31%, 47%, 1) 50%, hsla(284, 79%, 28%, 1) 75%, hsla(279, 97%, 14%, 1) 100%);
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(353, 36%, 82%, 1) 0%,
+    hsla(340, 22%, 65%, 1) 25%,
+    hsla(314, 31%, 47%, 1) 50%,
+    hsla(284, 79%, 28%, 1) 75%,
+    hsla(279, 97%, 14%, 1) 100%
+  );
 
-    background: -webkit-linear-gradient(90deg, hsla(353, 36%, 82%, 1) 0%, hsla(340, 22%, 65%, 1) 25%, hsla(314, 31%, 47%, 1) 50%, hsla(284, 79%, 28%, 1) 75%, hsla(279, 97%, 14%, 1) 100%);
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(353, 36%, 82%, 1) 0%,
+    hsla(340, 22%, 65%, 1) 25%,
+    hsla(314, 31%, 47%, 1) 50%,
+    hsla(284, 79%, 28%, 1) 75%,
+    hsla(279, 97%, 14%, 1) 100%
+  );
 
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#e2c2c6", endColorstr="#b9929f", GradientType=1);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#e2c2c6", endColorstr="#b9929f", GradientType=1);
 }
 
 textarea {
-    resize: none;
-    width: 40vw;
+  resize: none;
+  width: 40vw;
+  height: 8vw;
+  font-size: 1.5rem;
+  padding: 3px;
+  border-radius: 10px;
 }
 
 .whole-body {
-    font-family: "Poppins", sans-serif;
-    margin-left: 30%;
-    margin-right: 30%;
-    align-items: center;
-    background-color: aliceblue;
-
+  font-family: "Poppins", sans-serif;
 }
 
 .comment {
-    align-items: center;
-    text-align: justify;
-    border: 3px;
-}
-
-#login {
-    text-align: center;
-    font-size: x-large;
-
+  display: flex;
+  background-color: rgba(243, 243, 243, 0.956);
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  padding: 0.5rem;
 }
 
 #text {
-    text-align: justify;
+  text-align: justify;
 }
 
 #guzik {
-    background-color: transparent;
-    color: #3498db;
-    border: 5px solid #3498db;
-    border-radius: 10px;
-    padding: 10px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: large;
-    cursor: pointer;
-    font-weight: 1000;
+  background-color: transparent;
+  color: #3498db;
+  border: 5px solid #3498db;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: large;
+  cursor: pointer;
+  font-weight: 1000;
 }
 
 #guzik:hover {
-    background-color: #3498db;
-    color: white;
-    border-color: #2980b9;
+  background-color: #3498db;
+  color: white;
+  border-color: #2980b9;
 }
 
 .add-comment-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .guzik-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.CommentSection {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+p {
+  color: #2980b9;
+}
+
+.Back {
+  background-color: transparent;
+  color: #3498db;
+  border: 5px solid #3498db;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: large;
+  cursor: pointer;
+  font-weight: 1000;
+}
+
+.Back:hover {
+  background-color: #3498db;
+  color: white;
+  border-color: #2980b9;
+}
+.CenterButton {
+  display: flex;
+  justify-content: center;
+}
+
+p3 {
+  margin-left: 4rem;
 }
